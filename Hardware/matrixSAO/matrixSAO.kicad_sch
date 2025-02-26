@@ -1155,6 +1155,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C4749192"
+			(at 99.06 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "6"
 			(uuid "d4121496-8683-4931-af08-ddf1dcd76a4e")
 		)
@@ -1229,6 +1238,15 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 99.06 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C16772"
 			(at 99.06 123.19 0)
 			(effects
 				(font
