@@ -167,20 +167,15 @@ int main (void)
     putASCIIatPos('y',11+6*15);
     putASCIIatPos('l',11+6*16);
     putASCIIatPos('e',11+6*17);
-    putASCIIatPos('d',11+6*17);
-    putASCIIatPos('m',11+6*18);
-    putASCIIatPos('a',11+6*19);
-    putASCIIatPos('t',11+6*20);
-    putASCIIatPos('r',11+6*21);
-    putASCIIatPos('i',11+6*22);
-    putASCIIatPos('x',11+6*23);
-    putASCIIatPos(' ',11+6*24);
+    putASCIIatPos('d',11+6*18);
+    putASCIIatPos('m',11+6*19);
+    putASCIIatPos('a',11+6*20);
+    putASCIIatPos('t',11+6*21);
+    putASCIIatPos('r',11+6*22);
+    putASCIIatPos('i',11+6*23);
+    putASCIIatPos('x',11+6*24);
     putASCIIatPos(' ',11+6*25);
-
-    
-
-
-
+    putASCIIatPos(' ',11+6*26);
 
     bufferOffset=0;
 
