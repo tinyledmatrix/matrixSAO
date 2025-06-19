@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include "font5x7.h"
 //#include <ch32v00x_conf.h> 
+#include "flash.h"
 
 #define COL_COUNT 11
 #define ROW_COUNT 7
@@ -115,6 +116,7 @@ uint16_t t=1;
 int main (void)
 {
     SystemInit();
+    unlockD7();
     Delay_Ms(100);
     funGpioInitAll();
 
