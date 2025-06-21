@@ -6,7 +6,7 @@
 
 #define COL_COUNT 11
 #define ROW_COUNT 7
-#define BUFFER_COL_COUNT (30*6)
+#define BUFFER_COL_COUNT (27*6)   //30*8=180
 
 #define ANODE_PIN 0
 #define CATHODE_PIN 1
@@ -91,7 +91,7 @@ void initMatrixBufferWithDummyData(void)
     }
 }
 
-void putASCIIatPos(char index, uint8_t pos)
+void putASCIIatPos(char index, uint16_t pos)
 {
     uint8_t colCounter =0;
     if ((pos+5)>BUFFER_COL_COUNT)  return;   // don't allow clipped Letters for now  
@@ -105,6 +105,16 @@ void putASCIIatPos(char index, uint8_t pos)
                 MatrixBuffer[i][pos+colCounter]=0xFF;
         }
         colCounter++;
+    }
+}
+
+void putStringToBuffer(char* inString)
+{
+    uint16_t i=0;
+    while ( (inString[i]!='/0') && (i<BUFFER_COL_COUNT/6) )
+    {
+        putASCIIatPos(inString[i], i*6);
+        i++;
     }
 }
 
@@ -154,6 +164,7 @@ int main (void)
     //MatrixBuffer[3][3]=1;
     
     //putASCIIatPos('T',1);
+    /*
     putASCIIatPos(' ',0);
     putASCIIatPos(' ',6);
     putASCIIatPos('H',11);
@@ -182,7 +193,9 @@ int main (void)
     putASCIIatPos('i',11+6*23);
     putASCIIatPos('x',11+6*24);
     putASCIIatPos(' ',11+6*25);
-    putASCIIatPos(' ',11+6*26);
+    putASCIIatPos(' ',11+6*26); //167
+    */
+    putStringToBuffer("  Hello from @tinyledmatrix");
 
     bufferOffset=0;
 
@@ -193,7 +206,7 @@ int main (void)
     {
         doMatrixStuff();
         counter++;
-        if (counter==8000)
+        if (counter==4000)
         {
             counter=0;
             bufferOffset++;
