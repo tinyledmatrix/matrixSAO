@@ -115,8 +115,13 @@ uint16_t t=1;
 
 int main (void)
 {
+   //FLASH_Unlock();
+   // FLASH_EraseOptionBytes();
+   // FLASH_UserOptionByteConfig(OB_STOP_NoRST, OB_STDBY_NoRST, OB_RST_NoEN, OB_PowerON_Start_Mode_USER);
+   // FLASH_Unlock();
+    //unlockD7();
     SystemInit();
-    unlockD7();
+    //unlockD7();
     Delay_Ms(100);
     funGpioInitAll();
 
@@ -181,7 +186,7 @@ int main (void)
 
     bufferOffset=0;
 
-    while(counter)
+    //while(counter)
 
 
     while(1)
